@@ -13,7 +13,7 @@ function createCounter () {
     };
 }
 
-const counter = new createCounter();
+const counter =  createCounter();
 counter();
 counter();
 counter();
