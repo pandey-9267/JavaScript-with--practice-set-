@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Todo List</p>
+
+    <input placeholder="Todo name" class="js-todo-input">
+
+    <button onclick="
+    addTodo();
+    ">Add</button>
+
+    <div class="js-todo-list"></div>
+
+    <script>
+
+        const todoList = [];
+        rendertodolist()
+
+        function rendertodolist() {
+            let todoListHTML = '';
+
+            for (let i = 0; i < todoList.length; i++) {
+                const todo = todoList[i];
+                const html = `<p>${todo}</p>`;
+                todoListHTML += html;
+            }
+            console.log(todoListHTML);
+
+            document.querySelector('.js-todo-list')
+                .innerHTML = todoListHTML;
+        }
+
+
+        function addTodo() {
+            const inputElement = document.querySelector('.js-todo-input');
+            const name = inputElement.value;
+
+            todoList.push(name);
+            // console.log(todoList);
+
+            inputElement.value = '';
+
+            rendertodolist();
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- // Original array of numbers
+        const nums = [2, 2, 6];   // An array with 3 numbers
+        let total = 0;            // Start total at 0
+
+        for (let i = 0; i < nums.length; i++) {
+            const num = nums[i];  // Take the number at index i
+            total = total + num;  // Add it to total
+        }
+
+        console.log(total);       // Print the result
+
+
+
+        // Create an empty array to store the doubled values
+        const numsDoubled = [];
+
+        // Loop through each element in the nums array
+        for (let i = 0; i < nums.length; i++) {
+
+            // Get the current element (number) from the array
+            const num = nums[i];
+
+            // Multiply the number by 2 and push (add) it into numsDoubled
+            numsDoubled.push(num * 2);
+        }
+
+        // Print the new array with doubled values
+        console.log(numsDoubled); -->

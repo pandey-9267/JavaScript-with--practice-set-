@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Projects</title>
+</head>
+
+<body>
+    <!-- Answer is at the bottom. -->
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+     if (event.key === 'Enter') {
+           calculateTotal();
+     }
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+    <script>
+        /*
+         * Issue = the calculation is inaccurate.
+         * Fix = calculate the number in cents and then
+         *       convert back to dollars at the end.
+         */
+        function calculateTotal() {
+            const inputElement = document.querySelector('.js-cost-input');
+
+            // Convert the numbers to cents by * 100.
+            let cost = Number(inputElement.value) * 100;
+
+
+            // when the costumer add less than 40 dollar it added 10 dollar 
+            if (cost < 4000) {
+                cost = cost + 1000;
+            }
+
+            // Convert back to dollars at the end.
+            document.querySelector('.js-total-cost')
+                .innerHTML = `$${cost / 100}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise ( (resolve, reject) => {
+            let success = true;
+            if (login) {
+                resolve("Login successful");
+            } else {
+                reject ("Login failed");
+            }
+        }); 
+        promise
+        .then( (res) => {
+            console.log(res);
+        })
+        .catch( (err) => {
+            comsole(err);
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- Create a Promise with a variable:
+
+let success = true;
+
+If success is true:
+
+Login successful
+
+If success is false:
+
+Login failed
+
+Use:
+
+resolve()
+reject()
+.then()
+.catch() -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function that swaps the first and last elements of an array
+        function arraySwap(array) {
+            // Find the index of the last element in the array
+            const lastIndex = array.length - 1;
+
+            // Save the last element in a variable
+            const lastValue = array[lastIndex];
+
+            // Save the first element in a variable
+            const firstValue = array[0];
+
+            // Swap them:
+            // Place the last value at the first position
+            array[0] = lastValue;
+
+            // Place the first value at the last position
+            array[lastIndex] = firstValue;
+
+            // Return the modified array
+            return array;
+        }
+
+        // Example 1: numbers array
+        // Before swap: [1, 20, 22, 24, 5]
+        // After swap:  [5, 20, 22, 24, 1]
+        console.log(arraySwap([1, 20, 22, 24, 5]));
+
+        // Example 2: strings array
+        // Before swap: ['hi', 'hello', 'hey']
+        // After swap:  ['hey', 'hello', 'hi']
+        console.log(arraySwap(['hi', 'hello', 'hey']));
+    </script>
+</body>
+
+</html>

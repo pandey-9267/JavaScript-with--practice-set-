@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    
+    // Function definition: addOne takes an array as input
+    function addOne(array) {
+
+        // Create a new empty array where we’ll store results
+        const result = [];
+
+        // Loop through each element of the input array
+        for (let i = 0; i < array.length; i++) {
+            // Take the current element, add 1 to it,
+            // then push (insert) it into the result array
+            result.push(array[i] + 1);
+        }
+
+        // After the loop finishes, return the result array
+        return result;
+    }
+
+    // Call the function with [1, 2, 3]
+    // Each number gets +1 → [2, 3, 4]
+    console.log(addOne([1, 2, 3]));
+
+    // Call the function with [-2, -1, 0, 99]
+    // Each number gets +1 → [-1, 0, 1, 100]
+    console.log(addOne([-2, -1, 0, 99]));
+    
+</script>
+</html>

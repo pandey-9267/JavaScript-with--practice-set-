@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle-btn {
+            background-color: rgb(230, 230, 230);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .is-toggle {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="toggle-btn js-btn" onclick="
+       toggled_btn('.js-btn');
+        ">Gaming</button>
+
+    <button class="toggle-btn  js-btn1" onclick="
+     toggled_btn('.js-btn1');
+        ">Music</button>
+
+    <button class="toggle-btn js-btn2" onclick="
+       toggled_btn('.js-btn2');
+        ">Tech</button>
+
+
+    <script>
+        function toggled_btn(alpha) {
+            const btns = document.querySelector(alpha);
+
+            if (!btns.classList.contains('is-toggle')) {
+
+                // Before turning this button ON, check if there's
+                // already a button that's turned ON and turn it OFF.
+                turnOffPreviousButton();
+
+                btns.classList.add('is-toggle');
+
+            } else {
+
+                btns.classList.remove('is-toggle');
+
+            }
+        }
+        function turnOffPreviousButton() {
+            const previousButton = document.querySelector('.is-toggle');
+            if (previousButton) {
+                previousButton.classList.remove('is-toggle');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

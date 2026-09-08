@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+
+        .is-toggle {
+            background-color: rgb(230, 230, 230);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="toggle-btn js-btn" onclick="
+        const btns = document.querySelector('.js-btn');
+        btns.classList.toggle('is-toggle');
+        ">Gaming</button>
+
+    <button class="toggle-btn  js-btn1" onclick="
+        const btn = document.querySelector('.js-btn1');
+        btn.classList.toggle('is-toggle');
+        ">Music</button>
+        
+    <button class="toggle-btn js-btn2" onclick="
+        const btnss = document.querySelector('.js-btn2');
+        btnss.classList.toggle('is-toggle');
+        ">Tech</button>
+
+</body>
+
+</html>
