@@ -1,0 +1,53 @@
+// Debounce
+// Debounce = Wait for silence.
+
+// TYPE
+//  ↓
+// Start timer ────────┐
+//                     │
+// TYPE again           │
+//  ↓                   │
+// Cancel timer         │
+// Start new timer ────┤
+//                     │
+// TYPE again           │
+//  ↓                   │
+// Cancel timer         │
+// Start new timer ────┤
+//                     │
+//                     ↓
+//                STOP TYPING
+//                     ↓
+//                  500ms
+//                     ↓
+//               API REQUEST
+
+
+
+// Throttle
+// Throttle = Control the speed.
+
+// SCROLL
+//   ↓
+// Function runs ✅
+
+// SCROLL
+// SCROLL
+// SCROLL
+// SCROLL
+//   ↓
+// Ignored ❌
+
+// 1 second passed
+//   ↓
+// Function runs ✅
+
+// SCROLL
+// SCROLL
+// SCROLL
+//   ↓
+// Ignored ❌
+
+// 1 second passed
+//   ↓
+// Function runs ✅
