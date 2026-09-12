@@ -1,0 +1,30 @@
+Q: What is localStorage?
+"localStorage is a browser storage mechanism that allows websites to store data as key-value pairs. 
+The stored values are strings, so objects are usually converted using JSON.stringify() and JSON.parse()."
+
+Main methods:
+localStorage.setItem()
+localStorage.getItem()
+localStorage.removeItem()
+localStorage.clear()
+That's the core of localStorage.
+
+
+
+🟢 Local Storage        vs                                Session Storage
+Local Storage	                                         Session Storage
+Data stays after browser/tab is closed                  	Data is removed when the tab/session ends
+Used for long-term storage	                           Used for temporary storage
+Shared across tabs of the same origin                	Separate for each tab
+Example: Theme, preferences                            	Example: Temporary form data
+Capacity is usually around 5–10 MB	                     Capacity is usually around 5 MB
+localStorage.setItem()                                	sessionStorage.setItem()
+
+
+
+
+Both store data as strings and use similar methods:
+setItem()
+getItem()
+removeItem()
+clear()
