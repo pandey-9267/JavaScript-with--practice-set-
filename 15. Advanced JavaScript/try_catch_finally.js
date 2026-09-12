@@ -47,12 +47,12 @@
 //         │   END      │
 //         └────────────┘
 
-try {
-    console.log("Finding...");
-    console.log(user.name);
-} catch (error) {
-    console.log("Something went wrong")
-}
+// try {
+//     console.log("Finding...");
+//     console.log(user.name);
+// } catch (error) {
+//     console.log("Something went wrong")
+// }
 
 // finally : Now suppose you want something to happen whether an error occurs or not.
 
@@ -99,12 +99,23 @@ try {
 //    │   END    │
 //    └──────────┘
 
-let user = {name: "Abhishek"}
+// let user = {name: "Abhishek"}
+// try {
+//     console.log("Trying...");
+//     console.log(user.name);
+// } catch (error) {
+//     console.log("Something went wrong");
+// } finally {
+//     console.log("Finished");
+// }
+
+
+
 try {
-    console.log("Trying...");
-    console.log(user.name);
+    let result = 10 / 2;
+    console.log(result);
 } catch (error) {
-    console.log("Something went wrong");
+    console.log("Error");
 } finally {
-    console.log("Finished");
+    console.log("Done");
 }
